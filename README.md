@@ -1,4 +1,4 @@
-instrument_example
+insturment_example
 ==================
 
 Example of a Ribbon Compass Instrument and developer instructions
