@@ -1,0 +1,57 @@
+ <h1>Testing Environment</h1>
+<p>
+These procedures describe the steps to modify the C#
+code within "vrInstrumentHostSample" in order to conduct testing.
+
+</p>
+
+<h2>Opening the C# code</h2>
+<p>
+Below are the directions to open the C# file within
+"vrInstrumentHostSample":
+<ol>
+<li>Navigate to the "Solution Explorer" </li>
+<li>Expand the "vrInstrumentHostSample" Project </li>
+<li>Expand "MainWindow.xmal" ></li>
+<img src="/../../instrument_example/images/vrI_c.jpg" name= "picture1">
+<li>Double click on "MainWindow.xaml.cs" </li>
+The C# file for vrInstrumentHostSample is now open.
+</ol>
+</p>
+
+<h2>Add "Initialization" to the Solutionӳ C# code</h2>
+<p>
+<img src="/../../instrument_example/images/inT.jpg" name= "picture2" width="660"><br>
+For Ribbon Compass the initialization code is placed after 
+the lines of code (shown above) within the MainWindow.xaml.cs 
+file. It allows for the instrument 
+ to show and be interacted when debugging (F5 or the 
+ green play button) the solution as a whole. The below lines of code 
+ handle the initialization.
+ <br>
+ <img src="/../../instrument_example/images/inF.jpg" name= "picture3" width="660">
+ <br>
+</p>
+
+<h2>Editing the test parameter</h2>
+<p>
+The code at the end of the "MainWindow.xaml.cs" file reads:
+<img src="/../../instrument_example/images/para.jpg" name= "picture4" width="660"> <br>
+This is what sets the test value of "rov.navigation.Yaw", 
+and isused by the Ribbon Compass.  Pitch and Roll can easily 
+be the elements simulated by replacing "rov.navigation.Yaw"
+ with "rov.navigation.Pitch" or "rov.navigation.Roll". 
+ Other ROV properties can be simulated so other instruments
+ can be developed to utilize them.  If you desire to delve
+ more into the content ROV class and what can be altered
+ use this <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.shapes.rectangle(v=vs.110).aspx">link</a>.
+<br><br>
+The actual range of the tool as to be modified in the 
+"MainWindow.xaml" file under the line: 
+ <img src="/../../instrument_example/images/mwx.jpg" name= "picture5" width="660"> <br>
+Where "Minimum" and "Maximum" control the range and mimic
+ the ROV's possible Yaw value from 0 to 360.
+ Having an understanding of the parameter you want
+ to build an instrument for is key so that you can
+ correctly test for it. 
+</p>

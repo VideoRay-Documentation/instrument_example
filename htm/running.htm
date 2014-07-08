@@ -1,0 +1,32 @@
+<h1>How to put a new Instrument into VideoRay Cockpit</h1>
+<p>
+To put the new instrument onto Cockpit, you will need a
+flash-drive or some other way (email) to get the .dll file
+from your local computer to the integrated control box's laptop.
+  The .dll is all you 
+will need to have your instrument running. There are a couple 
+of locations where this can be found. For the Ribbon Compass
+example:<br>
+<ol>
+<li>Open Window's Explorer</li>
+<li>Navigate to the "IntrumentHostSample" folder</li>
+<li>Continue to navigate along the path \Ribbon\obj\Debug</li>
+<li>Copy the RibbonCopmass.dll file onto your flash drive</li>
+</ol>
+<br>
+Regardless if using email or a flash drive, just get the .dll
+file to the integrated control box's laptop.  Once the .dll file 
+is on the laptop:
+ <ol>
+<li>Open the laptop's Windows Explorer</li>
+<li>Navigate to the "C:\Program Files(x86)\VideoRay\vrCockpit\Instruments" 
+folder</li>
+<li>Copy the RibbonCopmass.dll file into this location</li>
+<li>Close Windows Explorer</li>
+<li>Run Cockpit</li>
+</ol>
+At this point the instrument should be running. A common mistake
+is setting the size of the instrument too small so that it is 
+hard to see. The size of the instrument can be altered in either 
+its xaml or xaml.cs file.
+</p>
