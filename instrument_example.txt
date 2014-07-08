@@ -1,5 +1,5 @@
 #Document Commands
-!PRODUCT,instrument_example
+!PRODUCT,Instrument Example
 !VERSION,1.00.00
 !DOC_TYPE,
 !OUT_DIR,instrument_example/
@@ -9,7 +9,7 @@
 
 #Documentation Generation
 !INCLUDE,required/intro_.txt,1
-!INCLUDE,required/overview_qs_.txt,1
+!INCLUDE,required/overview_.txt,1
 
 *,Prerequisites,,prerequisites_.htm,,,
 *,Development Procedures,,dp.htm,,,
@@ -30,4 +30,4 @@
 ****,Coding the "XAML.CS" File,,c_coding.htm,,,
 *,Testing Environment,,testE.htm,,,
 **,Testing Environment C#,,testC.htm,,,
-*,Running on the ROV,,running.htm,,,
+*,Integrating Instruments into Cockpit,,running.htm,,,
