@@ -1,26 +1,25 @@
 <h1>Starting the XAML coding</h1>
 
 <p>
-This section will begin with renaming your XAML
+In the XAML window is where simple coding is done
+ and the Designer window displays what it will look like. For more overview of what the Designer provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh921077.aspx">here</a>.  For more overview of what the XMAL provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh700354.aspx">here</a>.  
+This section will continue with renaming your XAML
  file and other first steps.
-<br>
+ 
+<br><br>
 To rename your file:
 <ol> <!--"--> 
-<li>In "Solution Explorer" expand your Project
- (RibbonCompass)</li>
+<li>In "Solution Explorer" expand "Your Instrument's name" project</li>
 <li>Right click on "MainWindow.xaml"  </li>
 <li>Select Rename</li>
-<li>Type in the highlighted area "RibbonCompass"</li>
+<li>Type in the highlighted area "Your Instrument's name"</li>
  </ol>
 For the rest of the set up:
 <ol> <!--"--> 
-<li>In "Solution Explorer" expand your Project
- (RibbonCompass) </li>
-<li>Double click on "RibbonCompass.xaml"</li>
+<li>In "Solution Explorer" expand "Your Instrument's name"  </li>
+<li>Double click on ""Your Instrument's name".xaml"</li>
 <li>The XAML and Design Window are now open.
- In the XAML window is where simple coding is done
- and the Design window displays what it will look like.
- Edit the XAML window to read:</li>
+ Edit the XAML window to read (Substitute "Your Instrument's name" for "RibbonCompass" on the first line):</li>
  </ol>
 <img src="/../../instrument_example/images/XamlTop.jpg" name= "picture" width="660">
 
@@ -29,6 +28,6 @@ Between the "Canvas" class is where one begins to write
  which you can explicitly position child objects, using
  coordinates that are relative to the Canvas area.
  Important to note: Height="10" Width="100" are the
- dimensions visible once the instrument is running.
+ dimensions visible once the instrument is running. The  dimensions shown in Cockpit can be altered by the C# code, but the Height and Width located here are what show in the Designer window.
  Click <a target="_blank" href="http://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.canvas.Aspx">here</a> for more on the "Canvas" class.
 </p>
