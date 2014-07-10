@@ -1,10 +1,10 @@
 <h1>Starting the XAML coding</h1>
 
 <p>
-In the XAML window is where simple coding is done
- and the Designer window displays what it will look like. For more overview of what the Designer provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh921077.aspx">here</a>.  For more overview of what the XMAL provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh700354.aspx">here</a>.  
+The XAML window is where simple coding is done on the instrument. The designer window displays what the instrument will look like and this window can be used to manipulate the instrument. They are interconnected and altering something in one window will automatically update the other window. For example, if you drag a shape in the designer window to a new location, the location will reflect that change in the XAML code.  For more overview of what the Designer provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh921077.aspx">here</a>.  For more overview of what the XMAL provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh700354.aspx">here</a>.  The picture below shows the designer window in its top half (checkered area) and the XAML window in its bottom half. 
+<img src="/../../instrument_example/images/design&xaml.jpg" name= "picture" width="660">. <br>
 This section will continue with renaming your XAML
- file and other first steps.
+ file and other preliminary steps.
  
 <br><br>
 To rename your file:
@@ -23,11 +23,10 @@ For the rest of the set up:
  </ol>
 <img src="/../../instrument_example/images/XamlTop.jpg" name= "picture" width="660">
 
-Between the "Canvas" class is where one begins to write
+Between the "Canvas" declaration and its closing is where one writes
  their code. The "Canvas" class defines an area within
- which you can explicitly position child objects, using
- coordinates that are relative to the Canvas area.
- Important to note: Height="10" Width="100" are the
- dimensions visible once the instrument is running. The  dimensions shown in Cockpit can be altered by the C# code, but the Height and Width located here are what show in the Designer window.
- Click <a target="_blank" href="http://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.canvas.Aspx">here</a> for more on the "Canvas" class.
+ which you can explicitly position child objects, which use
+ coordinates that are relative to the Canvas area.  Click <a target="_blank" href="http://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.canvas.Aspx">here</a> for more on the "Canvas" class.
+ Important to note: Height="10" Width="130" are the
+ dimensions visible once the instrument is running! The raw dimensions shown in Cockpit can be altered by the C# code, but the 10/130 ratio will not change. The Height and Width located in the above image are shown in the Designer window as a thin gray rectangle. In the image below, the thin gray rectangle displays what will actually be displayed by the instrument. As seen in the image, it is fine to go off edge of the defined dimensions and is necessary in the Ribbon Compass example.<img src="/../../instrument_example/images/instrumentWidth.jpg" name= "picture" width="660">
 </p>
