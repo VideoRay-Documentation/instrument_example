@@ -1,6 +1,6 @@
 <h1>Fill Property and ImageBrush Class</h1>
 <p>
-Fill is a property that gets or sets the Brush that specifies the shape&rsquo;s ( used with the rectangle class in the example) interior. A color is therefore a valid value for the fill property.  ImageBrush is also a valid value for the fill property.  ImageBrush takes an image and paints it on the specific shape. For more information on the Fill property click
+Fill is a property that gets or sets the <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.brush(v=vs.110).aspx">Brush</a>, or how the shape&rsquo;s ( used with the rectangle class in the example) interior is painted.  A color is therefore a valid value for the fill property.  ImageBrush is also a valid value for the fill property.  ImageBrush takes an image and paints it on the specific shape. For more information on the Fill property click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.shapes.shape.fill(v=vs.110).aspx">here</a>.
 For more information
 on the ImageBrush class click
@@ -20,19 +20,15 @@ For information on the ImageSource Property click
   </p>
     <h1>How to Make an Image a Resource</h1>
 <p>
-The examples makes a .png file a resource, so it 
+The examples makes a png file a resource, so it 
 can be referenced from any computer and not have 
 to be hard coded.  For the example, an image made 
 in paint was used as the image to be brushed onto 
-the rectangle.  The png file was of made from 24 
-equal parts each to represent 45 degrees.  45*24= 
-1080.  The width of the rectangle was conveniently 
-set to 1080, the width for viewing was set to 360 
-(Before the first  &lt;Grid&gt; or &lt;Canvas&gt; is invoked) 
-and the rectangle was set to the right by 417 so 
-that the examples image would originally set with 
-North in the viewable center. To add a .png or .jpg file 
-as a resource:
+the rectangle.  The png file was of created from 24 
+equal parts each representing 45 degrees of a compass.  45*24= 1080.  The width of the rectangle  was then set to 
+set to 1080. the width for viewing was set to 360 
+(Before the first  &lt;Grid&gt; or &lt;Canvas&gt; is invoked) and the rectangle was set to the right by 417 so 
+that the examples image would originally set with North in the viewable center. To add a .png or .jpg file as a resource:
 <ol> <!--"--> 
 <li>Expand your 
 Project (RibbonCompass) in "Solution Explorer"</li>
