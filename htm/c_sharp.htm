@@ -1,20 +1,19 @@
 <h1>Coding in C#</h1>
 <p>
 This section goes over steps needed to successfully code and 
-manipulate the C# code associated with the Ribbon Compass
-Project. 
+manipulate the C# code associated with the Instrument. 
 </p>
 <h1>Opening the C# Code</h1>
 <p>
 To access the .xaml.cs file &#40;.cs is the extention for C# files&#41;:
 <ol>
 <li>Go to the "Solution Explorer"</li>
-<li>Expand your project, for the example this is called 
- "RibbonCompass" </li>
-<li>Expand your .xaml file, for the example this is 
- called "RibbonCompass.xaml" </li>
- <li>Double click on the .cs file, for the example it
- would be called "RibbonCompass.xaml.cs" </li>
+<li>Expand your project (for the example this is called 
+ "RibbonCompass") </li>
+<li>Expand your .xaml file (for the example this is 
+ called "RibbonCompass.xaml")</li>
+ <li>Double click on the .cs file (for the example it
+ would be called "RibbonCompass.xaml.cs") </li>
   <img src="/../../instrument_example/images/ribbonCompass_c.jpg" name= "picture1">
  </ol>
 </p>
@@ -28,11 +27,12 @@ code in</li>
 </ol>
 <br>
 The declarations at the top of the C# file tell the
-file which class it should utilize.  
-The declarations at the top of the code are:
+file which class it should utilize. This list of declarations below are a minimum for anyone who is making their own instrument.  A omission one can make is eliminating the System.Windows.Navigation  if navigation is not being utilized.  The parameters of the project are going to determine which declarations need to be made, but what is below will cover the basics such as using shapes.
+The declarations at the top of the code are:<br>
   <img src="/../../instrument_example/images/c_top.jpg" name= "picture2">
 <br>
-The rest of the code, covered in the next section, looks like:
+
+The rest of the code used in the Ribbon Compass example is shown below. Some part of the code are required for all C# codes for all Instruments and some are specific to the example. The next sectioj
 <img src="/../../instrument_example/images/c_bot.jpg" name= "picture3" width="660">
 </p>
  
