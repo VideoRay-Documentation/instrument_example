@@ -3,16 +3,15 @@
 RenderTransform gets or sets transform information 
 that affects the rendering position of this element. 
 This is a dependency property. TranslateTransform 
-sets the distance to which to move the object (in 
+sets the placement to which to move the object (in 
 the example&rsquo;s case a rectangle) along an axis (in 
-the example&rsquo;s case X).  The x:Name="RibbonPost" 
-allows the C# files to interact with it since it 
-has a name.  The X="0" initially sets the X axis 
-displacement to 0, but the C# code will interact 
-and change that.  If you wanted to move something 
-along the Y axis you would just change the X to a Y. 
-For more information on the RenderTransform Property
-click
+the example&rsquo;s case X) from the fixed origin.  The x:Name="" allows the C# files to interact with it since it has a name.  The X="" sets the initial X axis 
+displacement from the origin. <br>
+
+<br>In the example the C# code interacts and 
+and changes the X value. The Yaw property in the C# is the value that X is set to.  Yaw is from 0 to 359 and the C# code will move the rectangle 1 position to the left for every increment in degree. So 90 degrees moves the rectangle 90 positions to the left and making the compass needle appear over East (having moved right from North). Since Yaw only goes up to 359, the same 360 positions are used infinitely. <br>
+
+<br> If you wanted to move something along the Y axis you would just change the X to a Y. For more information on the RenderTransform Property click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.uielement.rendertransform.aspx">here</a>.
 For more information on the TranslateTransform.X Property
 click

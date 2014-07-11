@@ -1,37 +1,31 @@
 <h1>Fill Property and ImageBrush Class</h1>
 <p>
-Fill is a property that gets or sets the <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.brush(v=vs.110).aspx">Brush</a>, or how the shape&rsquo;s ( used with the rectangle class in the example) interior is painted.  A color is therefore a valid value for the fill property.  ImageBrush is also a valid value for the fill property.  ImageBrush takes an image and paints it on the specific shape. For more information on the Fill property click
+Fill is a property that gets or sets the <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.brush(v=vs.110).aspx">Brush</a>, or how the shape&rsquo;s (used with the rectangle class in the example) interior is painted.  A color is therefore a valid value for the fill property.  ImageBrush is also a valid value for the fill property.  ImageBrush takes an image and paints it on the specific shape. For more information on the Fill property click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.shapes.shape.fill(v=vs.110).aspx">here</a>.
 For more information
 on the ImageBrush class click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.imagebrush(v=vs.110).aspx">here</a>.
   </p>
-  <h1>ImageSource</h1>
+   
+  <h2>ImageSource</h2>
 <p>
 ImageSource specifies where the image is coming 
-from for the ImageBrush.  The path of the image 
+from for the ImageBrush class.  The path of the image 
 can be from any folder on the computer, with the 
 correct path. Without a "C:" or likewise prefix, 
-the folder path assumes that it starts at the Project&rsquo;s 
-name&rsquo;s folder. So in the example&rsquo;s case 
-"InstrumentHostSample".
-For information on the ImageSource Property click
+the folder path assumes that it starts at the Project&rsquo;s name&rsquo;s folder. So in the example&rsquo;s case 
+"InstrumentHostSample". For information on the ImageSource Property click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.imagebrush.imagesource(v=vs.110).aspx">here</a>.
   </p>
-    <h1>How to Make an Image a Resource</h1>
+    
+    <h2>How to Make an Image a Resource</h2>
 <p>
-The examples makes a png file a resource, so it 
+The  reason to make your  image a resource is so it 
 can be referenced from any computer and not have 
-to be hard coded.  For the example, an image made 
-in paint was used as the image to be brushed onto 
-the rectangle.  The png file was of created from 24 
-equal parts each representing 45 degrees of a compass.  45*24= 1080.  The width of the rectangle  was then set to 
-set to 1080. the width for viewing was set to 360 
-(Before the first  &lt;Grid&gt; or &lt;Canvas&gt; is invoked) and the rectangle was set to the right by 417 so 
-that the examples image would originally set with North in the viewable center. To add a .png or .jpg file as a resource:
+to be hard coded. To add file as a resource:
 <ol> <!--"--> 
 <li>Expand your 
-Project (RibbonCompass) in "Solution Explorer"</li>
+Project (Your project's name) in "Solution Explorer"</li>
 <li>Right click on "Resource"</li>
 <li>Select "Add"</li>
 <li>Select "Existing Item&hellip; " </li>
@@ -41,7 +35,19 @@ Project (RibbonCompass) in "Solution Explorer"</li>
 <li>Select "Your image" by left clicking on it</li>
 <li>In the "Properties" Window (View> Properties if you cannot see it) select "Resource" from the dropdown menu for "Build Action"</li>
  <img src="/../../instrument_example/images/image_property.jpg" name= "picture" >
-
- </ol>
- 
+ </ol> 
   </p>
+  
+  <h2>The Image</h2>
+<p>
+Visual Studio is rather robust and can take a variety of image types.  While not a primary concern, the programmer may want to be cognisant of the size of there image.
+<br><br>
+The Ribbon Compass example utilizes a png file as a resource. The resource is a part of the project and can be referenced from any computer (not having to be hard coded).  In the example, an image was made in paint and used as the image brushed onto the rectangle.  The paint png file was created from 24 equal parts each representing 45 degrees of a compass (45*24= 1080). The value of 1080 was chosen to allow for flexibility for viewing. The <a target="_blank" href="http://localhost/out/instrument_example/html/c_coding.html">updating</a> section helps explain the manipulation of the Yaw property.  The Yaw property is from 0 to 359 and the C# code will move the rectangle 1 position to the left for every increment in degree. So 90 degrees moves the rectangle's position 90 to the left and making the compass needle appear over East (mimicking a right turn from North).  At 359 it just skips back to the 0 position (seamlessly) so that the same 360 positions are used infinitely. The image was made to be 1080, or 3 full compasses, so that if you wanted, you could easily set the boundaries of the ribbon compass to view 360 on either side of the needle. Currently the Ribbon Compass sees 65 degrees on either side of the needle.  Each of the 24 parts looked like this:<br>
+<img src="/../../instrument_example/images/small.jpg" name= "picture" >
+<br>
+24 of the above parts were combined together, through copying and pasting. Text was then added to the image to represent the cardinal directions in order to look like:<br> <a target="_blank" href="/../../instrument_example/images/ribbon_concept_15.jpg"><img src="/../../instrument_example/images/ribbon_concept_15.jpg" name= "picture" width="660"></a>.
+
+<br>  In the XAML file the width of the rectangle  was set to 1080, to match the prior math. <br> <a target="_blank" href="/../../instrument_example/images/width.jpg"><img src="/../../instrument_example/images/width.jpg" name= "picture" width="660"></a>
+
+<br> The width for viewing was set to 130 (Before the first  &lt;Grid&gt; or &lt;Canvas&gt; is invoked) and the rectangle was set to the right by (about) 415 (using Canvas.Left) so that the examples image would originally set with North in the viewable center.
+</p>

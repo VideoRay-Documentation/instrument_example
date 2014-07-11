@@ -23,7 +23,7 @@
 **,XAML,,x_start.htm,,,
 ***,Coding the "XAML" File,,x_coding.htm,,,
 ****,Rectangle Class,,x_rect.htm,,,
-****,Fill Property,,x_rectF.htm,,,
+****,Utilizing an Image,,x_rectF.htm,,,
 ****,Transform Property,,x_rectT.htm,,,
 ****,Polygon Class,,x_poly.htm,,,
 ****,TextBlock Class,,x_text.htm,,,
