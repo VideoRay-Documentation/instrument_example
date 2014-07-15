@@ -1,4 +1,4 @@
- <h1>Important parts of C#</h1>
+ <h1>Body of C#</h1>
 <p>
 This section looks at the functions
 of the specific parts of the C# code.
@@ -8,10 +8,8 @@ of the specific parts of the C# code.
 <p>
 <img src="/../../instrument_example/images/c_top1.jpg" name= "picture1" width="660">
 <br>
-The picture above is the code which declares RibbonCompass 
-as a ROV instrument class as seen the top line.  The class 
-RibbonCompass then calls the the method to Initialize or 
-start the component. 
+This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which declares RibbonCompass as a ROV instrument class as seen the top line.  If you are creating your own instrument edit RibbonCompass to read "your project's name". The class 
+RibbonCompass (now edited to "your project's name") then calls the the method to Initialize or start the component. 
 
 </p>
 
@@ -19,77 +17,36 @@ start the component.
 <p>
 <img src="/../../instrument_example/images/c_top2.jpg" name= "picture2">
 <br>
-The picture above is the code which is utilized by cockpit 
-to display information about the name and description of the
-Instrument. InstrumentName is very important when 
-updating changes to height and width of your 
-instrument. When you alter the height or width on line 8 
-in the RibbonCompass.xaml file you will have to change 
-the value after "return".  
-If the text immediately after "return" is not altered and 
-you do change the width and height of the instrument, 
-it will only stretch the shapes within the instrument 
-to the same of the height and width as before.  
-</p>
-
-<h2>Updating</h2>
-<p>
-<img src="/../../instrument_example/images/c_top3.jpg" name= "picture3" width="660">
-<br>
-The above picture shows the most important part of 
-the code.  The two if-else statements handle the movement 
-of the Rectangle in the XAML file and the editing of the 
-TextBlock in the XAML file. <br><br>
-  
-The first if-else statement is doing two simple things.  
-First it goes 
-through the if-else statement to see if the 
-value of rov.navigation.Yaw is near 360, if 
-it is then it rounds to 0.  The double value 
-of rov.navigation.Yaw is the representation of 
-the ROV's yaw or heading.  This means a Yaw of 90 
-is due east and 180 is due south.  After being sorted by 
-the if-else statement the property of "txtMagnetic.Text" 
-is changed to that of the Yaw.  "txtMagnetic" is the name 
-of the "TextBLock" in the XAML file that is responsible 
-for displaying the value of the yaw for the instrument.  
-The ".Text" shows that the text property within 
-"txtMagnetic" is being altered. The right hand side of 
-the equation  "String.Format("{0,5:0.}", rov.navigation.Yaw)"
- is converting the value of Yaw, which is a Double, to a 
- string. A string is displayable as text and is what is 
- needed.  <br><br>
-
-The second if-else statement  Same as the prior if-else 
-statement, this checks to see is the value of the Yaw is
- above 359.5 degrees.  If its 359.5 or above, then it acts as 
- if the
- Yaw is equal to 0.  If the Yaw is below, then alters the
- value of  "RibbonPost.X".  "RibbonPost" is the name of 
- the "Rectangle" in the XAML file that is responsible for
- being the ribbon compass.  The ".X" is the text property
- of "RibbonPost" is being altered and represents the 
- position of the Rectangle on the x axis.  As described 
- in another 
- <a target="_blank" href="../../instrument_example_example_example_example/html/x_rectF.html">section</a>
- <a target="_blank" href="../../instrument_example_example_example_example/html/x_rect.html">here</a>
- an Image of a Ribbon Compass was 
- brushed on to a rectangle. The rectangle's length was 
- set so that 1 unit represented 1 degree. So when the 
- ".X" property is changed by 1, the ribbon moves by 1.  
+This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which is utilized by cockpit to display information about the name and description of the Instrument. If you are creating your own instrument edit "Simple Ribbon Compass" & "Provides a simple heading display" to something that makes more sense for your instrument. The InstrumentName will be the name of your instrument that appears in Cockpit and LongDescription is the description that appears when you pan over the instrument in Cockpit. InstrumentName is very important when updating changes to height and width of your instrument. When you alter the height or width on line 8 in the XAML file (before Canvas class in invoked) you will have to change the return value of InstrumentName to something different.  If the text immediately after "return" is not altered and you do change the width and height of the instrument, it will only stretch the shapes within the instrument to the height and width as old, not changing the size only the appearance.  
 </p>
 
 <h2></h2>
 <p>
 <img src="/../../instrument_example/images/c_top4.jpg" name= "picture4" width="660">
 <br>
-The picture above is the code which sets the default 
-location as well as the default width and height of the 
-instrument.  The Rect structure is in the following format: <br><br> 
+This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which sets the default location as well as the default width and height of the instrument.  The Rect structure is in the following format: <br><br> 
 "Rect (X position, Y position, Width, Height)"<br><br>
 The way cockpit maps the x-y axis is with the origin (0,0)
 at the top left of the screen.  Positive Y is the right. 
 Positive X is toward the bottom of the screen (negative is 
 above the screen).  TrueWidth and TrueHeight grab the values
-of the width and height from the xaml file on line 8. 
+of the width and height from the XAML file on line 8. 
+</p>
+
+<h2>Updating</h2>
+<p>
+<img src="/../../instrument_example/images/c_top3.jpg" name= "picture3" width="660">
+<br>
+The above picture is SPECIFIC TO RIBBON COMPASS and shows the most important part of Ribbon Compass. The process shown here though, can be utilized in other Instruments.  The two if-else statements handle the movement of the Rectangle in the XAML file and the editing of the TextBlock in the XAML file. <br><br>
+  
+The first if-else statement is doing two simple things.  First it goes through the if-else statement to see if the 
+value of rov.navigation.Yaw is near 360, if it is then it rounds to 0.  The double value of rov.navigation.Yaw is the representation of the ROV's yaw or heading.  This means a Yaw of 90 is due east and 180 is due south.  After being sorted by the if-else statement the property of "txtMagnetic.Text" is changed to that of the Yaw.  "txtMagnetic" is the name of the "TextBLock" in the XAML file that is responsible for displaying the value of the yaw for the instrument.  The ".Text" shows that the text property within "txtMagnetic" is being altered. The right hand side of the equation  "String.Format("{0,5:0.}", rov.navigation.Yaw)" is converting the value of Yaw, which is a Double, to a  string. A string is usable for the text property while a double is not.  <br><br>
+
+The second if-else statement, same as the prior if-else statement, checks to see is the value of the Yaw is above 359.5 degrees.  If its 359.5 or above, then it acts as if the Yaw is equal to 0.  If the Yaw is below, then alters the value of  "RibbonPost.X".  "RibbonPost" is the name of the "Rectangle" in the XAML file that is responsible for being the ribbon compass.  The ".X" is the text property of "RibbonPost" is being altered and represents the position of the Rectangle on the x axis.  As described in another 
+ <a target="_blank" href="../../instrument_example_example_example_example/html/x_rectF.html">section</a>
+ <a target="_blank" href="../../instrument_example_example_example_example/html/x_rect.html">here</a>
+ an Image of a Ribbon Compass was 
+ brushed on to a rectangle. The rectangle's length was 
+ set so that 1 unit represented 1 degree. So when the 
+ ".X" property is changed by 1, the ribbon moves by 1.  
 </p>

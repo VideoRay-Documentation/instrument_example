@@ -1,32 +1,24 @@
 <h1>How to Integrate New Instruments into VideoRay Cockpit</h1>
 <p>
-To put the new instrument onto Cockpit, you will need a
+To put the new instrument into Cockpit, you will need a
 flash-drive or some other way (email) to get the .dll file
-from your local computer to the integrated control box's laptop.
-  The .dll is all you 
-will need to have your instrument running. There are a couple 
-of locations where this can be found. For the Ribbon Compass
-example:<br>
+from your local computer to the integrated control box's laptop. The .dll is all you will need to have your instrument running. There are a couple of locations where this can be found. For the Ribbon Compass example:<br>
 <ol>
-<li>Open Window's Explorer</li>
+<li>Open Windows Explorer</li>
 <li>Navigate to the "IntrumentHostSample" folder</li>
 <li>Continue to navigate along the path "\Ribbon\obj\Debug"</li>
 <li>Copy the RibbonCopmass.dll file onto your flash drive</li>
 </ol>
 <br>
 Regardless if using email or a flash drive, just get the .dll
-file to the integrated control box's laptop.  Once the .dll file 
-is on the laptop:
+file to the integrated control box's laptop.  Once the .dll file is on the laptop:
  <ol>
 <li>Open the laptop's Windows Explorer</li>
-<li>Navigate to the "C:\Program Files(x86)\VideoRay\vrCockpit\Instruments" 
-folder</li>
+<li>Navigate to the "C:\ProgramFiles(x86)\VideoRay\vrCockpit\Instruments" folder</li>
 <li>Copy the RibbonCopmass.dll file into this location</li>
 <li>Close Windows Explorer</li>
 <li>Run Cockpit</li>
 </ol>
-At this point the instrument should be running. A common mistake
-is setting the size of the instrument too small so that it is 
-hard to see. The size of the instrument can be altered in either 
-its xaml or xaml.cs file.
+At this point the instrument should be running. A common mistake is setting the size of the instrument too small so that it is hard to see. The size of the instrument can be altered in either its <a target="_blank" href="http://localhost/out/instrument_example/html/x_start.html" >xaml</a> or <a target="_blank" href="http://localhost/out/instrument_example/html/c_coding.html" >xaml.cs</a> file. Another area to try diagnosing if the the instrument does not show is to go to the <a target="_blank" href="http://vrweb/pro_4/html/settings_instruments_display.html" >Instruments Display</a> and see if the instrument is unselected.
+
 </p>

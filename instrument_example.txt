@@ -31,4 +31,4 @@
 ***,Coding the "XAML.CS" File,,c_coding.htm,,,
 *,Testing Environment,,testE.htm,,,
 **,Testing Environment C#,,testC.htm,,,
-*,Integrating Instruments into Cockpit,,running.htm,,,
+*,Integrating Instruments Live,,running.htm,,,

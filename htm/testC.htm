@@ -12,7 +12,7 @@ Below are the directions to open the C# file within
 <ol>
 <li>Navigate to the "Solution Explorer" </li>
 <li>Expand the "vrInstrumentHostSample" Project </li>
-<li>Expand "MainWindow.xmal" ></li>
+<li>Expand "MainWindow.xmal"</li>
 <img src="/../../instrument_example/images/vrI_c.jpg" name= "picture1">
 <li>Double click on "MainWindow.xaml.cs" </li>
 The C# file for vrInstrumentHostSample is now open.
@@ -22,12 +22,12 @@ The C# file for vrInstrumentHostSample is now open.
 <h2>Add "Initialization" to the Solution C# code</h2>
 <p>
 <img src="/../../instrument_example/images/inT.jpg" name= "picture2" width="660"><br>
-For Ribbon Compass the initialization code is placed after 
+For "Your Instrument" the initialization code is placed after 
 the lines of code (shown above) within the MainWindow.xaml.cs 
 file. It allows for the instrument 
  to show and be interacted when debugging (F5 or the 
  green play button) the solution as a whole. The below lines of code 
- handle the initialization.
+ handle the initialization (Replace "RibbonCompass" with "Your Instrument's name").
  <br>
  <a target="_blank" border="0" href="/../../instrument_example/images/inF.jpg"> <img target="_blank" border="0" src="/../../instrument_example/images/inF.jpg"  width="660"></a>
   <br>
@@ -38,7 +38,7 @@ file. It allows for the instrument
 The code at the end of the "MainWindow.xaml.cs" file reads:
 <a target="_blank" border="0" href="/../../instrument_example/images/para.jpg"> <img target="_blank" border="0" src="/../../instrument_example/images/para.jpg"  width="660"></a>. <br>
 This is what sets the test value of "rov.navigation.Yaw", 
-and isused by the Ribbon Compass.  Pitch and Roll can easily 
+and isused by the"Your Instrument".  Pitch and Roll can easily 
 be the elements simulated by replacing "rov.navigation.Yaw"
  with "rov.navigation.Pitch" or "rov.navigation.Roll". 
  Other ROV properties can be simulated so other instruments
