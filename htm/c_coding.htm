@@ -6,7 +6,7 @@ of the specific parts of the C# code.
 
 <h2>Initializing the component</h2>
 <p>
-<img src="/../../instrument_example/images/c_top1.jpg" name= "picture1" width="660">
+<img src="/../../out/instrument_example/images/c_top1.jpg" name= "picture1" width="660">
 <br>
 This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which declares RibbonCompass as a ROV instrument class as seen the top line.  If you are creating your own instrument edit RibbonCompass to read "your project's name". The class 
 RibbonCompass (now edited to "your project's name") then calls the the method to Initialize or start the component. 
@@ -15,14 +15,14 @@ RibbonCompass (now edited to "your project's name") then calls the the method to
 
 <h2>InstrumentName & LongDescription</h2>
 <p>
-<img src="/../../instrument_example/images/c_top2.jpg" name= "picture2">
+<img src="/../../out/instrument_example/images/c_top2.jpg" name= "picture2">
 <br>
 This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which is utilized by cockpit to display information about the name and description of the Instrument. If you are creating your own instrument edit "Simple Ribbon Compass" & "Provides a simple heading display" to something that makes more sense for your instrument. The InstrumentName will be the name of your instrument that appears in Cockpit and LongDescription is the description that appears when you pan over the instrument in Cockpit. InstrumentName is very important when updating changes to height and width of your instrument. When you alter the height or width on line 8 in the XAML file (before Canvas class in invoked) you will have to change the return value of InstrumentName to something different.  If the text immediately after "return" is not altered and you do change the width and height of the instrument, it will only stretch the shapes within the instrument to the height and width as old, not changing the size only the appearance.  
 </p>
 
 <h2></h2>
 <p>
-<img src="/../../instrument_example/images/c_top4.jpg" name= "picture4" width="660">
+<img src="/../../out/instrument_example/images/c_top4.jpg" name= "picture4" width="660">
 <br>
 This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which sets the default location as well as the default width and height of the instrument.  The Rect structure is in the following format: <br><br> 
 "Rect (X position, Y position, Width, Height)"<br><br>
@@ -35,7 +35,7 @@ of the width and height from the XAML file on line 8.
 
 <h2>Updating</h2>
 <p>
-<img src="/../../instrument_example/images/c_top3.jpg" name= "picture3" width="660">
+<img src="/../../out/instrument_example/images/c_top3.jpg" name= "picture3" width="660">
 <br>
 The above picture is SPECIFIC TO RIBBON COMPASS and shows the most important part of Ribbon Compass. The process shown here though, can be utilized in other Instruments.  The two if-else statements handle the movement of the Rectangle in the XAML file and the editing of the TextBlock in the XAML file. <br><br>
   

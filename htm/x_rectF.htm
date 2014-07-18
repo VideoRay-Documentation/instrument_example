@@ -1,6 +1,6 @@
 <h1>Fill Property and ImageBrush Class</h1>
 <p>
-Fill is a property that gets or sets the <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.brush(v=vs.110).aspx">Brush</a>, or how the shape&rsquo;s (used with the rectangle class in the example) interior is painted.  A color is therefore a valid value for the fill property.  ImageBrush is also a valid value for the fill property.  ImageBrush takes an image and paints it on the specific shape. For more information on the Fill property click
+Fill <a name="fill" onmouseover="picture1.src=fill.src" onmouseout="picture1.src=Base.src"><img src="../../required/images/icon_hand.gif"></a> is a property that gets or sets the <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.brush(v=vs.110).aspx">Brush</a>, or how the shape&rsquo;s (used with the rectangle class in the example) interior is painted.  A color is therefore a valid value for the fill property.  ImageBrush is also a valid value for the fill property.  ImageBrush takes an image and paints it on the specific shape. For more information on the Fill property click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.shapes.shape.fill(v=vs.110).aspx">here</a>.
 For more information
 on the ImageBrush class click
@@ -9,13 +9,14 @@ on the ImageBrush class click
    
   <h2>ImageSource</h2>
 <p>
-ImageSource specifies where the image is coming 
+ImageSource<a name="sore" onmouseover="picture1.src=sore.src" onmouseout="picture1.src=Base.src"><img src="../../required/images/icon_hand.gif"></a> specifies where the image is coming 
 from for the ImageBrush class.  The path of the image 
 can be from any folder on the computer, with the 
 correct path. Without a "C:" or likewise prefix, 
-the folder path assumes that it starts at the Project&rsquo;s name&rsquo;s folder. So in the example&rsquo;s case 
-"InstrumentHostSample". For information on the ImageSource Property click
+the folder path assumes that it starts at the Project&rsquo;s name&rsquo;s folder. So in the example&rsquo;s case the
+"InstrumentHostSample" folder. For information on the ImageSource Property click
   <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.imagebrush.imagesource(v=vs.110).aspx">here</a>.
+  <img src="/../../out/instrument_example/images/rectangle.jpg" name= "picture1" width="660">
   </p>
     
     <h2>How to Make an Image a Resource</h2>
@@ -33,8 +34,10 @@ Project (Your project's name) in "Solution Explorer"</li>
 <li>Click "Add"</li>
 <li>Expand the "Resources" folder in the "Solution Explorer" within your expanded project</li>
 <li>Select "Your image" by left clicking on it</li>
-<li>In the "Properties" Window (View> Properties if you cannot see it) select "Resource" from the dropdown menu for "Build Action"</li>
- <img src="/../../instrument_example/images/image_property.jpg" name= "picture" >
+<li>In the "Properties" Window (View> Properties if you cannot see it) select "Resource" from the dropdown menu for "Build Action" <a name="resj" onmouseover="picture2.src=resj.src" onmouseout="picture2.src=Base2.src"><img src="../../required/images/icon_hand.gif"></a>
+
+</li>
+ <img src="/../../out/instrument_example/images/image_property.jpg" name= "picture2" >
  </ol> 
   </p>
   
@@ -43,11 +46,11 @@ Project (Your project's name) in "Solution Explorer"</li>
 Visual Studio is rather robust and can take a variety of image types, including but not limited to jpeg and png.  While not usually a problem, the programmer may want to be cognisant of the size of there image.
 <br><br>
 The Ribbon Compass example utilizes a png file as a resource. The resource is a part of the project and can be referenced from any computer (not having to be hard coded).  In the example, an image was made in paint and used as the image brushed onto the rectangle.  The paint png file was created from 24 equal parts each representing 45 degrees of a compass (45*24= 1080). The value of 1080 was chosen to allow for flexibility for viewing. The <a target="_blank" href="http://localhost/out/instrument_example/html/c_coding.html">updating</a> section helps explain the manipulation of the Yaw property.  The Yaw property is from 0 to 359 and the C# code will move the rectangle 1 position to the left for every increment in degree. So 90 degrees moves the rectangle's position 90 to the left and making the compass needle appear over East (mimicking a right turn from North).  At 359 it just skips back to the 0 position (seamlessly) so that the same 360 positions are used infinitely. The image was made to be 1080, or 3 full compasses, so that if you wanted, you could easily set the boundaries of the ribbon compass to view 360 on either side of the needle. Currently the Ribbon Compass sees 65 degrees on either side of the needle.  Each of the 24 parts looks like this:<br>
-<img src="/../../instrument_example/images/small.jpg" name= "picture" >
+<img src="/../../out/instrument_example/images/small.jpg" name= "picture" >
 <br>
-24 of the above parts are combined together, through copying and pasting. Text is then added to the image to represent the cardinal directions in order to look like:<br> <a target="_blank" href="/../../instrument_example/images/ribbon_concept_15.jpg"><img src="/../../instrument_example/images/ribbon_concept_15.jpg" name= "picture" width="660"></a>
+24 of the above parts are combined together, through copying and pasting. Text is then added to the image to represent the cardinal directions in order to look like:<br> <a target="_blank" href="/../../out/instrument_example/images/ribbon_concept_15.jpg"><img src="/../../out/instrument_example/images/ribbon_concept_15.jpg" name= "picture" width="660"></a>
 
-<br>  In the XAML file the width of the rectangle is set to 1080, to match the prior math. <br> <a target="_blank" href="/../../instrument_example/images/width.jpg"><img src="/../../instrument_example/images/width.jpg" name= "picture" width="660"></a>
+<br>  In the XAML file the width of the rectangle is set to 1080, to match the prior math. <br> <a target="_blank" href="/../../out/instrument_example/images/width.jpg"><img src="/../../out/instrument_example/images/width.jpg" name= "picture" width="660"></a>
 
 <br> The width for viewing is set to 130 (Before the first  &lt;Grid&gt; or &lt;Canvas&gt; is invoked) and the rectangle is set to the right by (about) 415 (using Canvas.Left) so that the example's image has North in the viewable center.
 </p>
