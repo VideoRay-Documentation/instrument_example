@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Coding the "XAML.CS" File</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../../required/css/style_tags.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_classes.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_ids.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="../../required/css/style_menu.css" type="text/css" />
+        <!--##LOCAL_CSS##-->
+<script type="text/javascript" src="../../required/javascript/preview_checks.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview_config.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview.js"></script>
+<script type="text/javascript" src="../../required/javascript/show_hide.js"></script>
+<!--##JAVASCRIPT##-->
+
+</head>
+
+<body>
+
+<div id="page">
+
+  <div id="header">
+    <div id="headerLogo">
+      <a href="links_videoray.html"><img src="../../required/images/logo.png" border="0"></a>
+      </div>
+    <div id="headerTitle">
+      Instrument Example 
+      </div>
+
+    <div id="headerBreadCrumb">
+      <div class="headerBreadCrumbLeft">
+        <a accesskey="p" class="previous" href="c_sharp.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>C#</span></a>
+        </div>
+      <div class="headerBreadCrumbRight">
+        <a accesskey="n" class="next" href="testE.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Testing Environment</span></a>
+        </div>
+      <a href="dp.html">Development Procedures</a> > <a accesskey="u" href="c_sharp.html">C#</a> > Coding the "XAML.CS" File
+      </div>
+    </div>
+
+  <div id="content">
+    <table id="contentTable">
+      <tr>
+        <td id="contentMenu">
+          <div id="SideNav">
+            
+<ul>
+  <li><a href="index.html">Introduction</a>
+  <ul>
+    <li><a href="copyright.html">Copyright</a></li>
+    <li><a href="_intro_language.html">Language Support</a>
+    <ul>
+      <li><a href="_intro_language.html"><img src="../../required/images/globe2.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_toc_view.html">Table of Contents</a></li>
+    <li><a href="intro_about.html">About this Document</a>
+    <ul>
+      <li><a href="custom_my_notes.html">Customize this Document</a></li>
+      </ul>
+      </li>
+    <li><a href="how_to_get_help.html">How to Get Help</a></li>
+    </ul>
+    </li>
+  <li><a href="overview_.html">Product Overview</a>
+  <ul>
+    <li><a href="overview_faq.html">Product FAQ</a>
+    <ul>
+      <li><a href="overview_faq.html"><img src="../../required/images/overview_faq.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_glossary_view.html">Glossary / Index</a></li>
+    </ul>
+    </li>
+  <li><a href="prerequisites_.html">Prerequisites</a></li>
+  <li><a href="dp.html">Development Procedures</a>
+  <ul>
+    <li><a href="open_solution.html">Pre-coding Steps</a>
+    <ul>
+      <li><a href="open_solution.html">Open the Solution</a></li>
+      <li><a href="new_project.html">Creating a New Project</a></li>
+      <li><a href="open_solution_ex.html">Opening "Solution Explorer"</a></li>
+      <li><a href="set_properties.html">Set Project Properties</a></li>
+      <li><a href="add_references.html">Add Project References</a></li>
+      <li><a href="set_properties_pj.html">Setting Up Your Project Files</a></li>
+      </ul>
+      </li>
+    <li><a href="x_start.html">XAML</a>
+    <ul>
+      <li><a href="x_coding.html">Coding the "XAML" File</a>
+      <ul>
+        <li><a href="x_rect.html">Rectangle Class</a></li>
+        <li><a href="x_rectF.html">Utilizing an Image</a></li>
+        <li><a href="x_rectT.html">Transform Property</a></li>
+        <li><a href="x_poly.html">Polygon Class</a></li>
+        <li><a href="x_text.html">TextBlock Class</a></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    <li><a href="c_sharp.html">C#</a>
+    <ul>
+      <li><a href="c_coding.html">Coding the "XAML.CS" File</a></li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  <li><a href="testE.html">Testing Environment</a>
+  <ul>
+    <li><a href="testC.html">Testing Environment C#</a></li>
+    </ul>
+    </li>
+  <li><a href="running.html">Integrating Instruments Live</a></li>
+  </ul>
+
+            </div>        
+          </td>
+        <td id="contentText" rowspan="2">
+           <h1>Body of C#</h1>
+<p>
+This section looks at the functions
+of the specific parts of the C# code.
+</p>
+
+<h2>Initializing the component</h2>
+<p>
+<img src="/../../out/instrument_example/images/c_top1.jpg" name= "picture1" width="660">
+<br>
+This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which declares RibbonCompass as a ROV instrument class as seen the top line.  If you are creating your own instrument edit RibbonCompass to read "your project's name". The class 
+RibbonCompass (now edited to "your project's name") then calls the the method to Initialize or start the component. 
+
+</p>
+
+<h2>InstrumentName & LongDescription</h2>
+<p>
+<img src="/../../out/instrument_example/images/c_top2.jpg" name= "picture2">
+<br>
+This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which is utilized by cockpit to display information about the name and description of the Instrument. If you are creating your own instrument edit "Simple Ribbon Compass" & "Provides a simple heading display" to something that makes more sense for your instrument. The InstrumentName will be the name of your instrument that appears in Cockpit and LongDescription is the description that appears when you pan over the instrument in Cockpit. InstrumentName is very important when updating changes to height and width of your instrument. When you alter the height or width on line 8 in the XAML file (before Canvas class in invoked) you will have to change the return value of InstrumentName to something different.  If the text immediately after "return" is not altered and you do change the width and height of the instrument, it will only stretch the shapes within the instrument to the height and width as old, not changing the size only the appearance.  
+</p>
+
+<h2></h2>
+<p>
+<img src="/../../out/instrument_example/images/c_top4.jpg" name= "picture4" width="660">
+<br>
+This section of code is REQUIRED no matter what type of instrument you make! The picture above is the code which sets the default location as well as the default width and height of the instrument.  The Rect structure is in the following format: <br><br> 
+"Rect (X position, Y position, Width, Height)"<br><br>
+The way cockpit maps the x-y axis is with the origin (0,0)
+at the top left of the screen.  Positive Y is the right. 
+Positive X is toward the bottom of the screen (negative is 
+above the screen).  TrueWidth and TrueHeight grab the values
+of the width and height from the XAML file on line 8. 
+</p>
+
+<h2>Updating</h2>
+<p>
+<img src="/../../out/instrument_example/images/c_top3.jpg" name= "picture3" width="660">
+<br>
+The above picture is SPECIFIC TO RIBBON COMPASS and shows the most important part of Ribbon Compass. The process shown here though, can be utilized in other Instruments.  The two if-else statements handle the movement of the Rectangle in the XAML file and the editing of the TextBlock in the XAML file. <br><br>
+  
+The first if-else statement is doing two simple things.  First it goes through the if-else statement to see if the 
+value of rov.navigation.Yaw is near 360, if it is then it rounds to 0.  The double value of rov.navigation.Yaw is the representation of the ROV's yaw or heading.  This means a Yaw of 90 is due east and 180 is due south.  After being sorted by the if-else statement the property of "txtMagnetic.Text" is changed to that of the Yaw.  "txtMagnetic" is the name of the "TextBLock" in the XAML file that is responsible for displaying the value of the yaw for the instrument.  The ".Text" shows that the text property within "txtMagnetic" is being altered. The right hand side of the equation  "String.Format("{0,5:0.}", rov.navigation.Yaw)" is converting the value of Yaw, which is a Double, to a  string. A string is usable for the text property while a double is not.  <br><br>
+
+The second if-else statement, same as the prior if-else statement, checks to see is the value of the Yaw is above 359.5 degrees.  If its 359.5 or above, then it acts as if the Yaw is equal to 0.  If the Yaw is below, then alters the value of  "RibbonPost.X".  "RibbonPost" is the name of the "Rectangle" in the XAML file that is responsible for being the ribbon compass.  The ".X" is the text property of "RibbonPost" is being altered and represents the position of the Rectangle on the x axis.  As described in another 
+ <a target="_blank" href="../../instrument_example_example_example_example/html/x_rectF.html">section</a>
+ <a target="_blank" href="../../instrument_example_example_example_example/html/x_rect.html">here</a>
+ an Image of a Ribbon Compass was 
+ brushed on to a rectangle. The rectangle's length was 
+ set so that 1 unit represented 1 degree. So when the 
+ ".X" property is changed by 1, the ribbon moves by 1.  
+</p>
+          <script type="text/javascript" src="../../required/javascript/my_notes_size.js"></script>
+          <script type="text/javascript" src="../../required/javascript/my_notes.js"></script>
+          </td>
+        </tr>
+      <tr>
+        <td id="contentSideBar">
+          <!--##CONTENT_2##-->
+          <center>
+          <form method="get" action="http://www.google.com/search" target="_blank">
+            <input type="text" name="q" size="24" maxlength="255" value="" /> <input type="image" src="../../required/images/icon_search.png" border="0" value="Google Search" /><br />
+            <input type="checkbox" name="sitesearch" value="download.videoray.com/documentation" checked /> VideoRay Documentation Only
+            </form>
+          <p>[ <a href="http://www.rovschool.com/survey/index.php?sid=43821&43821X20X235=instrument_example%2Fhtml%2Fc_coding.html" target="_blank">Help us improve this document</a> ]</p>
+          
+          </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <div id="footer">
+    <div class="headerBreadCrumbLeft">
+      <a accesskey="p" class="previous" href="c_sharp.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>C#</span></a>
+      </div>
+    <div class="headerBreadCrumbRight">
+      <a accesskey="n" class="next" href="testE.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Testing Environment</span></a>
+      </div>
+    <div id="footerLinks">
+      <a href="links_downloads.html">DOWNLOADS</a> |
+      <a href="links_training.html">TRAINING</a> |
+      <a href="links_support.html">SUPPORT</a> |
+      <a href="links_community.html">COMMUNITY</a> |
+      <a href="links_rovfaq.html">FAQ</a> |
+      <a href="links_gallery.html">GALLERY</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="version">
+    Instrument Example , Version: 1.00.00
+    </div>
+
+  <div id="footerCopyright">
+    Copyright © 2014, VideoRay LLC - The Global Leader in Micro-ROV Technology
+    </div>
+
+</body>
+</html>

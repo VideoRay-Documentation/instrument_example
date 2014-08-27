@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Transform Property</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../../required/css/style_tags.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_classes.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_ids.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="../../required/css/style_menu.css" type="text/css" />
+        <!--##LOCAL_CSS##-->
+<script type="text/javascript" src="../../required/javascript/preview_checks.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview_config.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview.js"></script>
+<script type="text/javascript" src="../../required/javascript/show_hide.js"></script>
+<!--##JAVASCRIPT##-->
+
+</head>
+
+<body>
+
+<div id="page">
+
+  <div id="header">
+    <div id="headerLogo">
+      <a href="links_videoray.html"><img src="../../required/images/logo.png" border="0"></a>
+      </div>
+    <div id="headerTitle">
+      Instrument Example 
+      </div>
+
+    <div id="headerBreadCrumb">
+      <div class="headerBreadCrumbLeft">
+        <a accesskey="p" class="previous" href="x_rectF.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>Utilizing an Image</span></a>
+        </div>
+      <div class="headerBreadCrumbRight">
+        <a accesskey="n" class="next" href="x_poly.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Polygon Class</span></a>
+        </div>
+      <a href="dp.html">Development Procedures</a> > <a href="x_start.html">XAML</a> > <a accesskey="u" href="x_coding.html">Coding the "XAML" File</a> > Transform Property
+      </div>
+    </div>
+
+  <div id="content">
+    <table id="contentTable">
+      <tr>
+        <td id="contentMenu">
+          <div id="SideNav">
+            
+<ul>
+  <li><a href="index.html">Introduction</a>
+  <ul>
+    <li><a href="copyright.html">Copyright</a></li>
+    <li><a href="_intro_language.html">Language Support</a>
+    <ul>
+      <li><a href="_intro_language.html"><img src="../../required/images/globe2.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_toc_view.html">Table of Contents</a></li>
+    <li><a href="intro_about.html">About this Document</a>
+    <ul>
+      <li><a href="custom_my_notes.html">Customize this Document</a></li>
+      </ul>
+      </li>
+    <li><a href="how_to_get_help.html">How to Get Help</a></li>
+    </ul>
+    </li>
+  <li><a href="overview_.html">Product Overview</a>
+  <ul>
+    <li><a href="overview_faq.html">Product FAQ</a>
+    <ul>
+      <li><a href="overview_faq.html"><img src="../../required/images/overview_faq.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_glossary_view.html">Glossary / Index</a></li>
+    </ul>
+    </li>
+  <li><a href="prerequisites_.html">Prerequisites</a></li>
+  <li><a href="dp.html">Development Procedures</a>
+  <ul>
+    <li><a href="open_solution.html">Pre-coding Steps</a>
+    <ul>
+      <li><a href="open_solution.html">Open the Solution</a></li>
+      <li><a href="new_project.html">Creating a New Project</a></li>
+      <li><a href="open_solution_ex.html">Opening "Solution Explorer"</a></li>
+      <li><a href="set_properties.html">Set Project Properties</a></li>
+      <li><a href="add_references.html">Add Project References</a></li>
+      <li><a href="set_properties_pj.html">Setting Up Your Project Files</a></li>
+      </ul>
+      </li>
+    <li><a href="x_start.html">XAML</a>
+    <ul>
+      <li><a href="x_coding.html">Coding the "XAML" File</a>
+      <ul>
+        <li><a href="x_rect.html">Rectangle Class</a></li>
+        <li><a href="x_rectF.html">Utilizing an Image</a></li>
+        <li><a href="x_rectT.html">Transform Property</a></li>
+        <li><a href="x_poly.html">Polygon Class</a></li>
+        <li><a href="x_text.html">TextBlock Class</a></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    <li><a href="c_sharp.html">C#</a>
+    <ul>
+      <li><a href="c_coding.html">Coding the "XAML.CS" File</a></li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  <li><a href="testE.html">Testing Environment</a>
+  <ul>
+    <li><a href="testC.html">Testing Environment C#</a></li>
+    </ul>
+    </li>
+  <li><a href="running.html">Integrating Instruments Live</a></li>
+  </ul>
+
+            </div>        
+          </td>
+        <td id="contentText" rowspan="2">
+          <h1>Rectangle RenderTransform & TranslateTransform </h1>
+<p>
+RenderTransform gets or sets transform information 
+that affects the rendering position of this element. 
+RenderTransform is a dependency property. TranslateTransform 
+sets the placement to which to move the object (in 
+the example&rsquo;s case a rectangle) along an axis (in 
+the example&rsquo;s case X) from the fixed origin.  The x:Name="" allows the C# files to interact with it since it has a name.  The X="" sets the initial X axis 
+displacement from the origin. <br>
+
+<br>In the example the C# code interacts and 
+and changes the X value. The Yaw property in the C# code is the value that X is set to.  Yaw is from 0 to 359 and the C# code will move the rectangle 1 position to the left for every increment in degree. So 90 degrees moves the rectangle 90 positions to the left and making the compass needle appear over East (having moved right from North). Since Yaw only goes up to 359, the same 360 positions are used infinitely. <br>
+
+<br> If you wanted to move something along the Y axis you would just change the X to a Y. For more information on the RenderTransform Property click
+  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.uielement.rendertransform.aspx">here</a>.
+For more information on the TranslateTransform.X Property
+click
+  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/system.windows.media.translatetransform.x(v=vs.110).aspx">here</a>.
+
+  </p>
+          <script type="text/javascript" src="../../required/javascript/my_notes_size.js"></script>
+          <script type="text/javascript" src="../../required/javascript/my_notes.js"></script>
+          </td>
+        </tr>
+      <tr>
+        <td id="contentSideBar">
+          <!--##CONTENT_2##-->
+          <center>
+          <form method="get" action="http://www.google.com/search" target="_blank">
+            <input type="text" name="q" size="24" maxlength="255" value="" /> <input type="image" src="../../required/images/icon_search.png" border="0" value="Google Search" /><br />
+            <input type="checkbox" name="sitesearch" value="download.videoray.com/documentation" checked /> VideoRay Documentation Only
+            </form>
+          <p>[ <a href="http://www.rovschool.com/survey/index.php?sid=43821&43821X20X235=instrument_example%2Fhtml%2Fx_rectT.html" target="_blank">Help us improve this document</a> ]</p>
+          
+          </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <div id="footer">
+    <div class="headerBreadCrumbLeft">
+      <a accesskey="p" class="previous" href="x_rectF.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>Utilizing an Image</span></a>
+      </div>
+    <div class="headerBreadCrumbRight">
+      <a accesskey="n" class="next" href="x_poly.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Polygon Class</span></a>
+      </div>
+    <div id="footerLinks">
+      <a href="links_downloads.html">DOWNLOADS</a> |
+      <a href="links_training.html">TRAINING</a> |
+      <a href="links_support.html">SUPPORT</a> |
+      <a href="links_community.html">COMMUNITY</a> |
+      <a href="links_rovfaq.html">FAQ</a> |
+      <a href="links_gallery.html">GALLERY</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="version">
+    Instrument Example , Version: 1.00.00
+    </div>
+
+  <div id="footerCopyright">
+    Copyright © 2014, VideoRay LLC - The Global Leader in Micro-ROV Technology
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Testing Environment</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../../required/css/style_tags.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_classes.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_ids.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="../../required/css/style_menu.css" type="text/css" />
+        <!--##LOCAL_CSS##-->
+<script type="text/javascript" src="../../required/javascript/preview_checks.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview_config.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview.js"></script>
+<script type="text/javascript" src="../../required/javascript/show_hide.js"></script>
+<!--##JAVASCRIPT##-->
+
+</head>
+
+<body>
+
+<div id="page">
+
+  <div id="header">
+    <div id="headerLogo">
+      <a href="links_videoray.html"><img src="../../required/images/logo.png" border="0"></a>
+      </div>
+    <div id="headerTitle">
+      Instrument Example 
+      </div>
+
+    <div id="headerBreadCrumb">
+      <div class="headerBreadCrumbLeft">
+        <a accesskey="p" class="previous" href="c_coding.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>Coding the "XAML.CS" File</span></a>
+        </div>
+      <div class="headerBreadCrumbRight">
+        <a accesskey="n" class="next" href="testC.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Testing Environment C#</span></a>
+        </div>
+      Testing Environment
+      </div>
+    </div>
+
+  <div id="content">
+    <table id="contentTable">
+      <tr>
+        <td id="contentMenu">
+          <div id="SideNav">
+            
+<ul>
+  <li><a href="index.html">Introduction</a>
+  <ul>
+    <li><a href="copyright.html">Copyright</a></li>
+    <li><a href="_intro_language.html">Language Support</a>
+    <ul>
+      <li><a href="_intro_language.html"><img src="../../required/images/globe2.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_toc_view.html">Table of Contents</a></li>
+    <li><a href="intro_about.html">About this Document</a>
+    <ul>
+      <li><a href="custom_my_notes.html">Customize this Document</a></li>
+      </ul>
+      </li>
+    <li><a href="how_to_get_help.html">How to Get Help</a></li>
+    </ul>
+    </li>
+  <li><a href="overview_.html">Product Overview</a>
+  <ul>
+    <li><a href="overview_faq.html">Product FAQ</a>
+    <ul>
+      <li><a href="overview_faq.html"><img src="../../required/images/overview_faq.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_glossary_view.html">Glossary / Index</a></li>
+    </ul>
+    </li>
+  <li><a href="prerequisites_.html">Prerequisites</a></li>
+  <li><a href="dp.html">Development Procedures</a>
+  <ul>
+    <li><a href="open_solution.html">Pre-coding Steps</a>
+    <ul>
+      <li><a href="open_solution.html">Open the Solution</a></li>
+      <li><a href="new_project.html">Creating a New Project</a></li>
+      <li><a href="open_solution_ex.html">Opening "Solution Explorer"</a></li>
+      <li><a href="set_properties.html">Set Project Properties</a></li>
+      <li><a href="add_references.html">Add Project References</a></li>
+      <li><a href="set_properties_pj.html">Setting Up Your Project Files</a></li>
+      </ul>
+      </li>
+    <li><a href="x_start.html">XAML</a>
+    <ul>
+      <li><a href="x_coding.html">Coding the "XAML" File</a>
+      <ul>
+        <li><a href="x_rect.html">Rectangle Class</a></li>
+        <li><a href="x_rectF.html">Utilizing an Image</a></li>
+        <li><a href="x_rectT.html">Transform Property</a></li>
+        <li><a href="x_poly.html">Polygon Class</a></li>
+        <li><a href="x_text.html">TextBlock Class</a></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    <li><a href="c_sharp.html">C#</a>
+    <ul>
+      <li><a href="c_coding.html">Coding the "XAML.CS" File</a></li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  <li><a href="testE.html">Testing Environment</a>
+  <ul>
+    <li><a href="testC.html">Testing Environment C#</a></li>
+    </ul>
+    </li>
+  <li><a href="running.html">Integrating Instruments Live</a></li>
+  </ul>
+
+            </div>        
+          </td>
+        <td id="contentText" rowspan="2">
+           <h1>Testing Environment</h1>
+These procedures describe how to get the "Your Instrument" 
+project running within the "vrInstrumentHostSample" test
+solution and how to edit testable parameters. This 
+Solution was provided as a simple testing simulation. 
+Its current configuration is set to alter just the 
+Yaw parameter, but it can be easily modified to change 
+a breath of settings to mimic the real system. 
+</p>
+
+<h2>Add the "Your Instrument" "Project" as a "reference"</h2>
+<p>
+This step describes how to make sure that the project 
+"Your Instrument" is being referenced by the vrInstrumentHostSample 
+Solution.
+<ol>
+<li>Navigate to the "Solution Explorer" </li>
+<li>Expand the "vrInstrumentHostSample" Project </li>
+<li>Right click on "References"</li>
+<li>Select "Add Reference&hellip;" </li>
+<li>On the left pane click "Solution" </li>
+<li>Click on the name of your project (in this case 
+"Your Instrument", shown as RibbonCompass) </li>
+<li>Ensure the a check mark is in the box</li>
+<li>Click on "OK"</li>
+<img src="/../../out/instrument_example/images/ref.jpg" name= "picture1" >
+
+</ol>
+</p>
+          <script type="text/javascript" src="../../required/javascript/my_notes_size.js"></script>
+          <script type="text/javascript" src="../../required/javascript/my_notes.js"></script>
+          </td>
+        </tr>
+      <tr>
+        <td id="contentSideBar">
+          <!--##CONTENT_2##-->
+          <center>
+          <form method="get" action="http://www.google.com/search" target="_blank">
+            <input type="text" name="q" size="24" maxlength="255" value="" /> <input type="image" src="../../required/images/icon_search.png" border="0" value="Google Search" /><br />
+            <input type="checkbox" name="sitesearch" value="download.videoray.com/documentation" checked /> VideoRay Documentation Only
+            </form>
+          <p>[ <a href="http://www.rovschool.com/survey/index.php?sid=43821&43821X20X235=instrument_example%2Fhtml%2FtestE.html" target="_blank">Help us improve this document</a> ]</p>
+          
+          </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <div id="footer">
+    <div class="headerBreadCrumbLeft">
+      <a accesskey="p" class="previous" href="c_coding.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>Coding the "XAML.CS" File</span></a>
+      </div>
+    <div class="headerBreadCrumbRight">
+      <a accesskey="n" class="next" href="testC.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Testing Environment C#</span></a>
+      </div>
+    <div id="footerLinks">
+      <a href="links_downloads.html">DOWNLOADS</a> |
+      <a href="links_training.html">TRAINING</a> |
+      <a href="links_support.html">SUPPORT</a> |
+      <a href="links_community.html">COMMUNITY</a> |
+      <a href="links_rovfaq.html">FAQ</a> |
+      <a href="links_gallery.html">GALLERY</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="version">
+    Instrument Example , Version: 1.00.00
+    </div>
+
+  <div id="footerCopyright">
+    Copyright © 2014, VideoRay LLC - The Global Leader in Micro-ROV Technology
+    </div>
+
+</body>
+</html>

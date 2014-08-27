@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>C#</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../../required/css/style_tags.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_classes.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_ids.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="../../required/css/style_menu.css" type="text/css" />
+        <!--##LOCAL_CSS##-->
+<script type="text/javascript" src="../../required/javascript/preview_checks.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview_config.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview.js"></script>
+<script type="text/javascript" src="../../required/javascript/show_hide.js"></script>
+<!--##JAVASCRIPT##-->
+
+</head>
+
+<body>
+
+<div id="page">
+
+  <div id="header">
+    <div id="headerLogo">
+      <a href="links_videoray.html"><img src="../../required/images/logo.png" border="0"></a>
+      </div>
+    <div id="headerTitle">
+      Instrument Example 
+      </div>
+
+    <div id="headerBreadCrumb">
+      <div class="headerBreadCrumbLeft">
+        <a accesskey="p" class="previous" href="x_text.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>TextBlock Class</span></a>
+        </div>
+      <div class="headerBreadCrumbRight">
+        <a accesskey="n" class="next" href="c_coding.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Coding the "XAML.CS" File</span></a>
+        </div>
+      <a accesskey="u" href="dp.html">Development Procedures</a> > C#
+      </div>
+    </div>
+
+  <div id="content">
+    <table id="contentTable">
+      <tr>
+        <td id="contentMenu">
+          <div id="SideNav">
+            
+<ul>
+  <li><a href="index.html">Introduction</a>
+  <ul>
+    <li><a href="copyright.html">Copyright</a></li>
+    <li><a href="_intro_language.html">Language Support</a>
+    <ul>
+      <li><a href="_intro_language.html"><img src="../../required/images/globe2.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_toc_view.html">Table of Contents</a></li>
+    <li><a href="intro_about.html">About this Document</a>
+    <ul>
+      <li><a href="custom_my_notes.html">Customize this Document</a></li>
+      </ul>
+      </li>
+    <li><a href="how_to_get_help.html">How to Get Help</a></li>
+    </ul>
+    </li>
+  <li><a href="overview_.html">Product Overview</a>
+  <ul>
+    <li><a href="overview_faq.html">Product FAQ</a>
+    <ul>
+      <li><a href="overview_faq.html"><img src="../../required/images/overview_faq.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_glossary_view.html">Glossary / Index</a></li>
+    </ul>
+    </li>
+  <li><a href="prerequisites_.html">Prerequisites</a></li>
+  <li><a href="dp.html">Development Procedures</a>
+  <ul>
+    <li><a href="open_solution.html">Pre-coding Steps</a>
+    <ul>
+      <li><a href="open_solution.html">Open the Solution</a></li>
+      <li><a href="new_project.html">Creating a New Project</a></li>
+      <li><a href="open_solution_ex.html">Opening "Solution Explorer"</a></li>
+      <li><a href="set_properties.html">Set Project Properties</a></li>
+      <li><a href="add_references.html">Add Project References</a></li>
+      <li><a href="set_properties_pj.html">Setting Up Your Project Files</a></li>
+      </ul>
+      </li>
+    <li><a href="x_start.html">XAML</a>
+    <ul>
+      <li><a href="x_coding.html">Coding the "XAML" File</a>
+      <ul>
+        <li><a href="x_rect.html">Rectangle Class</a></li>
+        <li><a href="x_rectF.html">Utilizing an Image</a></li>
+        <li><a href="x_rectT.html">Transform Property</a></li>
+        <li><a href="x_poly.html">Polygon Class</a></li>
+        <li><a href="x_text.html">TextBlock Class</a></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    <li><a href="c_sharp.html">C#</a>
+    <ul>
+      <li><a href="c_coding.html">Coding the "XAML.CS" File</a></li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  <li><a href="testE.html">Testing Environment</a>
+  <ul>
+    <li><a href="testC.html">Testing Environment C#</a></li>
+    </ul>
+    </li>
+  <li><a href="running.html">Integrating Instruments Live</a></li>
+  </ul>
+
+            </div>        
+          </td>
+        <td id="contentText" rowspan="2">
+          <h1>Coding in C#</h1>
+<p>
+This section goes over steps needed to successfully code and 
+manipulate the C# code associated with the Instrument. 
+</p>
+<h1>Opening the C# Code</h1>
+<p>
+To access the .xaml.cs file &#40;.cs is the extention for C# files&#41;:
+<ol>
+<li>Go to the "Solution Explorer"</li>
+<li>Expand your project (for the example this is called 
+ "RibbonCompass") </li>
+<li>Expand your .xaml file (for the example this is 
+ called "RibbonCompass.xaml")</li>
+ <li>Double click on the .cs file (for the example it
+ would be called "RibbonCompass.xaml.cs") </li>
+  <img src="/../../out/instrument_example/images/ribbonCompass_c.jpg" name= "picture1">
+ </ol>
+</p>
+<h1>Editing C# Code</h1>
+<p>
+The best way to get the C# is either:
+<ol>
+<li>Deleting everything then copying and pasting the correct 
+code in</li>
+<li>Try adding the correct code from the code images to follow</li>
+</ol>
+<br>
+The declarations at the top of the C# file tell the
+file which class it should utilize. The list of declarations below are a minimum for anyone who is making their own instrument.  An omission one can make is eliminating the System.Windows.Navigation  if navigation is not being utilized.  The parameters of the project are going to determine which declarations need to be made, but what is below will cover the basics such as using shapes.
+The declarations at the top of the code are:<br>
+  <img src="/../../out/instrument_example/images/c_top.jpg" name= "picture2">
+<br>
+<br>
+The rest of the code used in the Ribbon Compass example is shown below. Some parts of the code are required for all C# codes for all Instruments and some are specific to the example. The next section, <a target="_blank" href="http://localhost/out/instrument_example/html/c_coding.html">Body of the C#</a>, document will specify which parts are specifically for the example and which are required in most user created instruments. <br> <br>
+<img src="/../../out/instrument_example/images/c_bot.jpg" name= "picture3" width="660">
+</p>
+ 
+          <script type="text/javascript" src="../../required/javascript/my_notes_size.js"></script>
+          <script type="text/javascript" src="../../required/javascript/my_notes.js"></script>
+          </td>
+        </tr>
+      <tr>
+        <td id="contentSideBar">
+          <!--##CONTENT_2##-->
+          <center>
+          <form method="get" action="http://www.google.com/search" target="_blank">
+            <input type="text" name="q" size="24" maxlength="255" value="" /> <input type="image" src="../../required/images/icon_search.png" border="0" value="Google Search" /><br />
+            <input type="checkbox" name="sitesearch" value="download.videoray.com/documentation" checked /> VideoRay Documentation Only
+            </form>
+          <p>[ <a href="http://www.rovschool.com/survey/index.php?sid=43821&43821X20X235=instrument_example%2Fhtml%2Fc_sharp.html" target="_blank">Help us improve this document</a> ]</p>
+          
+          </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <div id="footer">
+    <div class="headerBreadCrumbLeft">
+      <a accesskey="p" class="previous" href="x_text.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>TextBlock Class</span></a>
+      </div>
+    <div class="headerBreadCrumbRight">
+      <a accesskey="n" class="next" href="c_coding.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Coding the "XAML.CS" File</span></a>
+      </div>
+    <div id="footerLinks">
+      <a href="links_downloads.html">DOWNLOADS</a> |
+      <a href="links_training.html">TRAINING</a> |
+      <a href="links_support.html">SUPPORT</a> |
+      <a href="links_community.html">COMMUNITY</a> |
+      <a href="links_rovfaq.html">FAQ</a> |
+      <a href="links_gallery.html">GALLERY</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="version">
+    Instrument Example , Version: 1.00.00
+    </div>
+
+  <div id="footerCopyright">
+    Copyright © 2014, VideoRay LLC - The Global Leader in Micro-ROV Technology
+    </div>
+
+</body>
+</html>

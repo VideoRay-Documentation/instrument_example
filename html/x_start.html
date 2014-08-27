@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>XAML</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../../required/css/style_tags.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_classes.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="../../required/css/style_ids.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="../../required/css/style_menu.css" type="text/css" />
+        <!--##LOCAL_CSS##-->
+<script type="text/javascript" src="../../required/javascript/preview_checks.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview_config.js"></script>
+<script type="text/javascript" src="../../required/javascript/preview.js"></script>
+<script type="text/javascript" src="../../required/javascript/show_hide.js"></script>
+<script type="text/javascript" src="../../instrument_example/javascript/x_start.js"></script>
+
+</head>
+
+<body>
+
+<div id="page">
+
+  <div id="header">
+    <div id="headerLogo">
+      <a href="links_videoray.html"><img src="../../required/images/logo.png" border="0"></a>
+      </div>
+    <div id="headerTitle">
+      Instrument Example 
+      </div>
+
+    <div id="headerBreadCrumb">
+      <div class="headerBreadCrumbLeft">
+        <a accesskey="p" class="previous" href="set_properties_pj.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>Setting Up Your Project Files</span></a>
+        </div>
+      <div class="headerBreadCrumbRight">
+        <a accesskey="n" class="next" href="x_coding.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Coding the "XAML" File</span></a>
+        </div>
+      <a accesskey="u" href="dp.html">Development Procedures</a> > XAML
+      </div>
+    </div>
+
+  <div id="content">
+    <table id="contentTable">
+      <tr>
+        <td id="contentMenu">
+          <div id="SideNav">
+            
+<ul>
+  <li><a href="index.html">Introduction</a>
+  <ul>
+    <li><a href="copyright.html">Copyright</a></li>
+    <li><a href="_intro_language.html">Language Support</a>
+    <ul>
+      <li><a href="_intro_language.html"><img src="../../required/images/globe2.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_toc_view.html">Table of Contents</a></li>
+    <li><a href="intro_about.html">About this Document</a>
+    <ul>
+      <li><a href="custom_my_notes.html">Customize this Document</a></li>
+      </ul>
+      </li>
+    <li><a href="how_to_get_help.html">How to Get Help</a></li>
+    </ul>
+    </li>
+  <li><a href="overview_.html">Product Overview</a>
+  <ul>
+    <li><a href="overview_faq.html">Product FAQ</a>
+    <ul>
+      <li><a href="overview_faq.html"><img src="../../required/images/overview_faq.png" width="210"></a></li>
+      </ul>
+      </li>
+    <li><a href="_glossary_view.html">Glossary / Index</a></li>
+    </ul>
+    </li>
+  <li><a href="prerequisites_.html">Prerequisites</a></li>
+  <li><a href="dp.html">Development Procedures</a>
+  <ul>
+    <li><a href="open_solution.html">Pre-coding Steps</a>
+    <ul>
+      <li><a href="open_solution.html">Open the Solution</a></li>
+      <li><a href="new_project.html">Creating a New Project</a></li>
+      <li><a href="open_solution_ex.html">Opening "Solution Explorer"</a></li>
+      <li><a href="set_properties.html">Set Project Properties</a></li>
+      <li><a href="add_references.html">Add Project References</a></li>
+      <li><a href="set_properties_pj.html">Setting Up Your Project Files</a></li>
+      </ul>
+      </li>
+    <li><a href="x_start.html">XAML</a>
+    <ul>
+      <li><a href="x_coding.html">Coding the "XAML" File</a>
+      <ul>
+        <li><a href="x_rect.html">Rectangle Class</a></li>
+        <li><a href="x_rectF.html">Utilizing an Image</a></li>
+        <li><a href="x_rectT.html">Transform Property</a></li>
+        <li><a href="x_poly.html">Polygon Class</a></li>
+        <li><a href="x_text.html">TextBlock Class</a></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    <li><a href="c_sharp.html">C#</a>
+    <ul>
+      <li><a href="c_coding.html">Coding the "XAML.CS" File</a></li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  <li><a href="testE.html">Testing Environment</a>
+  <ul>
+    <li><a href="testC.html">Testing Environment C#</a></li>
+    </ul>
+    </li>
+  <li><a href="running.html">Integrating Instruments Live</a></li>
+  </ul>
+
+            </div>        
+          </td>
+        <td id="contentText" rowspan="2">
+          <h1>Starting the XAML coding</h1>
+
+<p>
+XAML is  is a declarative markup language. In Microsoft Visual Studio XAML code will be displayed in two different windows, the XAML and Designer windows. The XAML window is where simple coding is done on the instrument. The designer window displays what the instrument will look like and this window can be used to manipulate the instrument. They are interconnected and altering something in one window will automatically update the other window. For example, if you drag a shape in the designer window to a new location, the location will reflect that change in the XAML code.  For more overview of what the Designer window provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh921077.aspx">here</a>.  For more overview of what the XMAL window provides click  <a target="_blank" href="http://msdn.microsoft.com/en-us/library/hh700354.aspx">here</a>.  Additional information on the general format of the XAML click <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ms752059(v=vs.110).aspx">here</a>.  The picture below shows the designer window in the top half <a name="design" onmouseover="picture1.src=design.src" onmouseout="picture1.src=Base.src"><img src="../../required/images/icon_hand.gif"></a> top half and the XAML window in the <a name="xaml" onmouseover="picture1.src=xaml.src" onmouseout="picture1.src=Base.src"><img src="../../required/images/icon_hand.gif"></a> bottom half. 
+<img name="picture1" src="/../../out/instrument_example/images/design&xaml.jpg"  width="660">. <br>
+This section will continue with renaming your XAML
+ file and other preliminary steps.
+ 
+<br><br>
+To rename your file:
+<ol> <!--"--> 
+<li>In "Solution Explorer" expand "Your Instrument's name" project</li>
+<li>Right click on "MainWindow.xaml"  </li>
+<li>Select Rename</li>
+<li>Type in the highlighted area "Your Instrument's name"</li>
+ </ol>
+For the rest of the set up:
+<ol> <!--"--> 
+<li>In "Solution Explorer" expand "Your Instrument's name"  </li>
+<li>Double click on ""Your Instrument's name".xaml"</li>
+<li>The XAML and Design Window are now open.
+ Edit the XAML window to read (Substitute "Your Instrument's name" for "RibbonCompass" on the first line):</li>
+ </ol>
+<img src="/../../out/instrument_example/images/XamlTop.jpg" name= "picture2" width="660">
+
+Between the "&lt;Canvas&gt;" declaration and its closing ("&lt;/Canvas&gt;") is where one writes
+ their code. The "Canvas" class defines an area within
+ which you can explicitly position child objects, using
+ coordinates that are relative to the Canvas' area.  Click <a target="_blank" href="http://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.canvas.Aspx">here</a> for more on the "Canvas" class.
+ Important to note: Height="10" Width="130" are the
+  visible dimensions once the instrument is running! You will want to change your instrument's dimensions to fit your instrument's goals. If you're are going for a square, set the height and width to eachother.  The raw dimensions shown in Cockpit can be altered by the C# code, but the 10/130 ratio will not change. The Height and Width located in the <a name="width" onmouseover="picture2.src=width.src" onmouseout="picture2.src=Base2.src"><img src="../../required/images/icon_hand.gif"></a> above image are shown in the Designer window as a thin gray rectangle. In the image below, the thin gray rectangle displays what will actually be displayed by the instrument. As seen in the image, it is fine to go off edge of the defined dimensions and is necessary in the Ribbon Compass example.<img src="/../../out/instrument_example/images/instrumentWidth.jpg" name= "picture" width="660">
+</p>
+          <script type="text/javascript" src="../../required/javascript/my_notes_size.js"></script>
+          <script type="text/javascript" src="../../required/javascript/my_notes.js"></script>
+          </td>
+        </tr>
+      <tr>
+        <td id="contentSideBar">
+          <!--##CONTENT_2##-->
+          <center>
+          <form method="get" action="http://www.google.com/search" target="_blank">
+            <input type="text" name="q" size="24" maxlength="255" value="" /> <input type="image" src="../../required/images/icon_search.png" border="0" value="Google Search" /><br />
+            <input type="checkbox" name="sitesearch" value="download.videoray.com/documentation" checked /> VideoRay Documentation Only
+            </form>
+          <p>[ <a href="http://www.rovschool.com/survey/index.php?sid=43821&43821X20X235=instrument_example%2Fhtml%2Fx_start.html" target="_blank">Help us improve this document</a> ]</p>
+          
+          </center>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <div id="footer">
+    <div class="headerBreadCrumbLeft">
+      <a accesskey="p" class="previous" href="set_properties_pj.html"><img src="../../required/images/arrow_left_48.png" border="0"><span>Setting Up Your Project Files</span></a>
+      </div>
+    <div class="headerBreadCrumbRight">
+      <a accesskey="n" class="next" href="x_coding.html"><img src="../../required/images/arrow_right_48.png" border="0"><span>Coding the "XAML" File</span></a>
+      </div>
+    <div id="footerLinks">
+      <a href="links_downloads.html">DOWNLOADS</a> |
+      <a href="links_training.html">TRAINING</a> |
+      <a href="links_support.html">SUPPORT</a> |
+      <a href="links_community.html">COMMUNITY</a> |
+      <a href="links_rovfaq.html">FAQ</a> |
+      <a href="links_gallery.html">GALLERY</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="version">
+    Instrument Example , Version: 1.00.00
+    </div>
+
+  <div id="footerCopyright">
+    Copyright © 2014, VideoRay LLC - The Global Leader in Micro-ROV Technology
+    </div>
+
+</body>
+</html>
